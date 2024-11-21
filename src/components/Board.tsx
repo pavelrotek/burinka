@@ -363,9 +363,9 @@ export function Board() {
   }
 
   return (
-    <div className="flex flex-row space-x-4 m-4">
-      <div className="overflow-auto flex flex-col space-y-2 w-[24em] md:w-[32em]">
-        <div className="flex flex-row space-x-2 w-[24em] md:w-[32em]">
+    <div className="flex flex-row space-x-4 m-1">
+      <div className="overflow-auto flex flex-col space-y-2">
+        <div className="flex flex-row w-auto">
           <Button
             disabled={history.current.index == 0}
             onClick={handleUndoHistory}
@@ -380,7 +380,7 @@ export function Board() {
           </Button>
           <Button onClick={handleNew}>{"Nový"}</Button>
         </div>
-        <table className="w-[24em] md:w-[32em]">
+        <table className="w-auto">
           <tbody>
             {board.map((row, i) => {
               return (
